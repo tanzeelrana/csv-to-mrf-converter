@@ -2,11 +2,15 @@
   "name": "backend",
   "type": "module",
   "scripts": {
-    "dev": "tsx --watch src/index.ts"
+    "dev": "tsx --watch src/index.js"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.2",
-    "hono": "^4.6.6"
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "hono": "^4.6.7",
+    "multer": "^1.4.5-lts.1"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",

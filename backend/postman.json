@@ -1,0 +1,71 @@
+{
+    "info": {
+      "_postman_id": "your-unique-id",
+      "name": "Your API Collection Name",
+      "description": "A collection to test the backend API endpoints",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Get Processed Files",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{base_url}}/api/get-processed-files",
+            "host": ["{{base_url}}"],
+            "path": ["api", "get-processed-files"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get File by Filename",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{base_url}}/api/files?filename=your-filename",
+            "host": ["{{base_url}}"],
+            "path": ["api", "files"],
+            "query": [
+              {
+                "key": "filename",
+                "value": "your-filename"
+              }
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Upload CSV",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "multipart/form-data"
+            }
+          ],
+          "body": {
+            "mode": "formdata",
+            "formdata": [
+              {
+                "key": "files",
+                "type": "file",
+                "src": ""
+              }
+            ]
+          },
+          "url": {
+            "raw": "{{base_url}}/api/upload-csv",
+            "host": ["{{base_url}}"],
+            "path": ["api", "upload-csv"]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
+  

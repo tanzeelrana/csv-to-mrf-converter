@@ -1,14 +1,6 @@
 import { createTheme, MantineProvider } from "@mantine/core";
 import { RouterProvider } from "react-router-dom";
-import router from "./routes";
-
-export default function App() {
-  return (
-    <MantineProvider theme={theme}>
-      <RouterProvider router={router} />
-    </MantineProvider>
-  );
-}
+import router from "./router/routes";
 
 const theme = createTheme({
   primaryColor: "royalGreen",
@@ -29,3 +21,11 @@ const theme = createTheme({
     ],
   },
 });
+
+export default function App() {
+  return (
+    <MantineProvider theme={theme}>
+      <RouterProvider router={router} />
+    </MantineProvider>
+  );
+}
